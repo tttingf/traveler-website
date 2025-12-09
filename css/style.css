@@ -1,0 +1,354 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h1 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ffd700;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* 主内容区域 */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero {
+    background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), 
+                url('hero-bg.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 0;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 容器样式 */
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #667eea;
+}
+
+/* 景点详情页面专用样式 */
+.attraction-intro {
+    margin: 3rem 0;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.quick-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.info-value {
+    color: #667eea;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.attraction-features {
+    margin: 3rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.attraction-guide {
+    margin: 3rem 0;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guide-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.guide-section h3 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.guide-section ol,
+.guide-section ul {
+    padding-left: 1.5rem;
+}
+
+.guide-section li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.attraction-transport,
+.attraction-seasons,
+.attraction-nearby {
+    margin: 3rem 0;
+}
+
+.transport-grid,
+.seasons-grid,
+.nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.transport-item,
+.season-item,
+.nearby-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.transport-item h3,
+.season-item h3,
+.nearby-item h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.transport-item ul,
+.season-item p,
+.nearby-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.season-item p {
+    margin-bottom: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #667eea;
+        padding: 1rem 0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid,
+    .guide-content,
+    .transport-grid,
+    .seasons-grid,
+    .nearby-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-item,
+    .guide-section,
+    .transport-item,
+    .season-item,
+    .nearby-item {
+        padding: 1.5rem;
+    }
+}
+
+/* 图片放大功能 */
+img[data-enlargeable] {
+    cursor: zoom-in;
+}
